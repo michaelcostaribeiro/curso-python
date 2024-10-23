@@ -1,6 +1,6 @@
 secret_number = 777
 
-number int(input(
+number = int(input(
 """
 +================================+
 | Welcome to my game, muggle!    |
@@ -15,13 +15,13 @@ while number!= secret_number:
     print("""+===============================+
 |Ha ha! You're stuck in my loop!|
 +===============================+""")
-    number int(input("""+========================+
+    number = int(input("""+========================+
 |What is your next guess?|
 +========================+"""))
 
 
 
-print("+=+\n"+"|"+number+"|\n"+"+=+")
+print("+===+\n"+"|",number,"|\n"+"+===+", sep ="")
 
 print("""+====================================+
 |Well done, muggle! You are free now.|
