@@ -1,0 +1,1 @@
+MOVE_DISTANCE = 20
