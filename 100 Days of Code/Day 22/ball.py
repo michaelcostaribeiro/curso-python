@@ -1,6 +1,5 @@
 from turtle import Turtle, Screen
 
-
 class Ball(Turtle):
     def __init__(self):
         super().__init__()
@@ -17,19 +16,22 @@ class Ball(Turtle):
     def move(self):
         if self.ycor()> self.WINDOW_HEIGHT-5 or self.ycor()< self.WINDOW_HEIGHT*-1+5:
             self.setheading(self.heading()-90)
-            self.forward(30)   
-        self.forward(30)
+            self.forward(20)   
+        self.forward(20)
     
     def detect_paddle(self, paddle):
-        if self.distance(paddle)<10:
+        if self.distance(paddle)<50 and self.xcor() > 260:
+            self.setheading(self.heading()-120)
+        elif self.distance(paddle)<50 and self.xcor() < -260:
             self.setheading(self.heading()-120)
     
     def detect_miss(self):
-        if self.xcor() > 300:
+        if self.xcor() > 360:
             self.home()
             self.setheading(180)
-            return 1
-        elif self.xcor() < -300:
+            return 'user_point'
+        if self.xcor() < -360:
             self.home()
             self.setheading(0)
-            return 2
+            return 'enemy_point'
+        

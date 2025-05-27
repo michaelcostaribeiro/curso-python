@@ -11,6 +11,7 @@ class Scoreboard(Turtle):
         self.color('white')
         self.teleport(0,-300)
         self.pensize(5)
+        self.score = 0
         if draw_line == True:
             self.draw_dotted_line(18)
     
