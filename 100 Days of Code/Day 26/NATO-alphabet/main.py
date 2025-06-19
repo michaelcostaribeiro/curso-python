@@ -1,6 +1,6 @@
 import pandas
 
-nato = pandas.read_csv('NATO-alphabet/nato_phonetic_alphabet.csv')
+nato = pandas.read_csv('nato_phonetic_alphabet.csv')
 
 
 alphabet_in_nato = {}

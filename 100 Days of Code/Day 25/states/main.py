@@ -1,8 +1,8 @@
 import pandas as p
 import turtle as t
 
-STATES_CSV_PATH = 'states/50_states.csv'
-IMG_PATH = 'states/blank_states_img.gif'
+STATES_CSV_PATH = '50_states.csv'
+IMG_PATH = 'blank_states_img.gif'
 
 states = p.read_csv(STATES_CSV_PATH)
 state_x = states[states.state == "Alabama"].x.item()
